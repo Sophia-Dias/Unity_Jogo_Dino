@@ -6,10 +6,10 @@ public class Movimentar : MonoBehaviour
 {
     public Vector2 Direcao;
 
-    public float velocidade;
+    public float Velocidade;
 
     private void Update()
     {
-        transform.Translate(Direcao * velocidade * Time.deltaTime);
+        transform.Translate(Direcao * Velocidade * Time.deltaTime);
     }
 }
