@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &628188210188034792
+--- !u!1 &6728118894351935170
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,37 +8,38 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 628188210188034794}
-  - component: {fileID: 628188210188034795}
-  - component: {fileID: 628188210188034789}
+  - component: {fileID: 4392563629779854153}
+  - component: {fileID: 5815295268413433286}
+  - component: {fileID: 2791152876158413934}
+  - component: {fileID: -2619511993314707253}
   m_Layer: 0
-  m_Name: CactosFinosClonado
+  m_Name: CactoFino
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &628188210188034794
+--- !u!4 &4392563629779854153
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 628188210188034792}
+  m_GameObject: {fileID: 6728118894351935170}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 13.86, y: -0.35, z: 0}
-  m_LocalScale: {x: 2.68, y: 2.68804, z: 2.68}
+  m_LocalPosition: {x: 13.89, y: -0.351, z: 0}
+  m_LocalScale: {x: 2.567287, y: 2.6755962, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &628188210188034795
+--- !u!212 &5815295268413433286
 SpriteRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 628188210188034792}
+  m_GameObject: {fileID: 6728118894351935170}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -83,13 +84,13 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &628188210188034789
+--- !u!114 &2791152876158413934
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 628188210188034792}
+  m_GameObject: {fileID: 6728118894351935170}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2bba4a0509fbf6040bc04879f83c7fc3, type: 3}
@@ -97,3 +98,35 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Direcao: {x: -1, y: 0}
   Velocidade: 3
+--- !u!60 &-2619511993314707253
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6728118894351935170}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.34, y: 0.35}
+    newSize: {x: 0.34, y: 0.35}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: -0.14, y: 0.175}
+      - {x: -0.17, y: 0.13499999}
+      - {x: -0.17, y: -0.175}
+      - {x: 0.16, y: -0.175}
+      - {x: 0.17, y: -0.114999995}
+      - {x: 0.17, y: 0.16499999}
+      - {x: 0.14, y: 0.175}

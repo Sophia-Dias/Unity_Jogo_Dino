@@ -4,13 +4,13 @@ TextureImporter:
   internalIDToNameTable:
   - first:
       213: 6925146843550601790
-    second: CactosFinos_Separados1
+    second: CactosFinos_0
   - first:
       213: -6768941749241616335
-    second: CactosFinos_Separados2
+    second: CactosFinos_1
   - first:
       213: 78625898357181754
-    second: CactosFinos_Separados3
+    second: CactosFinos_2
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -100,7 +100,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: CactosFinos_Separados1
+      name: CactosFinos_0
       rect:
         serializedVersion: 2
         x: 0
@@ -121,10 +121,10 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: CactosFinos_Separados2
+      name: CactosFinos_1
       rect:
         serializedVersion: 2
-        x: 36
+        x: 34
         y: 0
         width: 34
         height: 35
@@ -142,7 +142,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: CactosFinos_Separados3
+      name: CactosFinos_2
       rect:
         serializedVersion: 2
         x: 68

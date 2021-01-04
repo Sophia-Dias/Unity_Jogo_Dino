@@ -4,21 +4,22 @@ using UnityEngine;
 
 public class GeradorCacto : MonoBehaviour
 {
-    public GameObject CactoPrefab;
+    public GameObject[] CactoPrefabs;
 
     public float DelayInicial;
 
     public float DelayEntreCactos;
 
-    // Start is called before the first frame update
     private void Start()
     {
         InvokeRepeating("GerarCacto", DelayInicial, DelayEntreCactos);
     }
 
-    // Update is called once per frame
     private void GerarCacto()
     {
-        Instantiate(CactoPrefab);     
+        var QuantidadeCactos = CactoPrefabs.Length;
+        var IndiceAleatorio = Random.Range(0, QuantidadeCactos);
+        var CactoPrefab = CactoPrefabs[IndiceAleatorio];
+        Instantiate(CactoPrefab, transform.position, Quaternion.identity);     
     }
 }
