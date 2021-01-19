@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Jogador : MonoBehaviour
 {
@@ -40,5 +41,12 @@ public class Jogador : MonoBehaviour
     private void FixedUpdate() 
     {
         EstaNoChao = Physics2D.Raycast(transform.position, Vector2.down, DistanciaMinimaChao, LayerChao);    
+    }
+    private void OnCollisionEnter2D(Collision2D other) 
+    {
+        if (other.gameObject.CompareTag("Inimigo")) 
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        }
     }
 }
