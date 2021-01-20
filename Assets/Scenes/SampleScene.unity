@@ -458,8 +458,9 @@ GameObject:
   - component: {fileID: 1070030655}
   - component: {fileID: 1070030654}
   - component: {fileID: 1070030658}
+  - component: {fileID: 1070030659}
   m_Layer: 0
-  m_Name: Dinossauro_Sozinho
+  m_Name: Dinossauro
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -646,6 +647,25 @@ MonoBehaviour:
   DistanciaMinimaChao: 0.5
   MultiplicadorPontos: 8
   PontosText: {fileID: 1801921243}
+--- !u!95 &1070030659
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1070030653}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: d3a375dc0dbfc3a4291eced7d36ef11c, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1126887734
 GameObject:
   m_ObjectHideFlags: 0
@@ -844,11 +864,11 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 50
+    m_FontSize: 70
     m_FontStyle: 0
     m_BestFit: 1
     m_MinSize: 0
-    m_MaxSize: 50
+    m_MaxSize: 70
     m_Alignment: 2
     m_AlignByGeometry: 0
     m_RichText: 1

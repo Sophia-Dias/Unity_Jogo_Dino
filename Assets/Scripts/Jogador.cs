@@ -26,7 +26,7 @@ public class Jogador : MonoBehaviour
     {
         Pontos += Time.deltaTime * MultiplicadorPontos;
 
-        PontosText.text = "Pontos: " + Mathf.FloorToInt(Pontos).ToString();
+        PontosText.text = "Pontuação: " + Mathf.FloorToInt(Pontos).ToString();
 
         if (Input.GetKeyDown(KeyCode.UpArrow))
         {
