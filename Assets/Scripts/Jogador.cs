@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class Jogador : MonoBehaviour
 {
@@ -11,19 +12,22 @@ public class Jogador : MonoBehaviour
 
     public LayerMask LayerChao;
 
-    public float DistanciaMinimaChao = 1; 
+    public float DistanciaMinimaChao; 
 
-    private bool EstaNoChao; 
+    private bool EstaNoChao;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    private float Pontos;
 
-    // Update is called once per frame
+    public float MultiplicadorPontos = 1;
+
+    public Text PontosText;
+
     void Update()
     {
+        Pontos += Time.deltaTime * MultiplicadorPontos;
+
+        PontosText.text = "Pontos: " + Mathf.FloorToInt(Pontos).ToString();
+
         if (Input.GetKeyDown(KeyCode.UpArrow))
         {
             Pular();
