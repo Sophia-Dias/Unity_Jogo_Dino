@@ -97,7 +97,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Direcao: {x: -1, y: 0}
-  Velocidade: 4
+  Velocidade: 6
 --- !u!60 &-2619511993314707253
 PolygonCollider2D:
   m_ObjectHideFlags: 0
