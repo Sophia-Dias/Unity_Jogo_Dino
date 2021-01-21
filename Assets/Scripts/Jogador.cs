@@ -28,17 +28,31 @@ public class Jogador : MonoBehaviour
 
     public Animator AnimatorComponent;
 
+    public AudioSource PularAudioSource;
+
+    public AudioSource CemPontosAudioSource;
+
+    public AudioSource FimDeJogoAudioSource;
+
     private void Start() 
     {
         Highscore = PlayerPrefs.GetFloat("HIGHSCORE");
-        HighscoreText.text = $"Highscore: {Mathf.FloorToInt(Highscore)}";
+        HighscoreText.text = $"HI {Mathf.FloorToInt(Highscore)}";
     }
 
     void Update()
     {
         Pontos += Time.deltaTime * MultiplicadorPontos;
 
-        PontosText.text = $"Pontuação: {Mathf.FloorToInt(Pontos)}";
+        var PontosArredondados = Mathf.FloorToInt(Pontos);
+        PontosText.text = PontosArredondados.ToString();
+
+        if (PontosArredondados > 0 
+            && PontosArredondados % 100 == 0
+            && !CemPontosAudioSource.isPlaying)
+        {
+            CemPontosAudioSource.Play();
+        }
 
         if (Input.GetKeyDown(KeyCode.UpArrow))
         {
@@ -61,6 +75,8 @@ public class Jogador : MonoBehaviour
         if (EstaNoChao)
         {
             rb.AddForce(Vector2.up * (ForcaPulo));
+
+            PularAudioSource.Play();
         }
     }
 
@@ -88,6 +104,8 @@ public class Jogador : MonoBehaviour
 
                 PlayerPrefs.SetFloat("HIGHSCORE", Highscore);
             }
+
+            FimDeJogoAudioSource.Play();
 
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
