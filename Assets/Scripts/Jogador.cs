@@ -17,18 +17,28 @@ public class Jogador : MonoBehaviour
     private bool EstaNoChao;
 
     private float Pontos;
+    
+    private float Highscore;
 
     public float MultiplicadorPontos = 1;
 
     public Text PontosText;
 
+    public Text HighscoreText;
+
     public Animator AnimatorComponent;
+
+    private void Start() 
+    {
+        Highscore = PlayerPrefs.GetFloat("HIGHSCORE");
+        HighscoreText.text = $"Highscore: {Mathf.FloorToInt(Highscore)}";
+    }
 
     void Update()
     {
         Pontos += Time.deltaTime * MultiplicadorPontos;
 
-        PontosText.text = "Pontuação: " + Mathf.FloorToInt(Pontos).ToString();
+        PontosText.text = $"Pontuação: {Mathf.FloorToInt(Pontos)}";
 
         if (Input.GetKeyDown(KeyCode.UpArrow))
         {
@@ -72,6 +82,13 @@ public class Jogador : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Inimigo")) 
         {
+            if (Pontos > Highscore) 
+            {
+                Highscore = Pontos;
+
+                PlayerPrefs.SetFloat("HIGHSCORE", Highscore);
+            }
+
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
     }
